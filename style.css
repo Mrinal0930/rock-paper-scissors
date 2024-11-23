@@ -1,0 +1,219 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+h1 {
+  background-color: #081b31;
+  color: white;
+  height: 5rem;
+  line-height: 5rem;
+}
+.choice:hover {
+  cursor: pointer;
+  background-color: #081b31;
+}
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  gap: 5rem;
+}
+#user-score,
+#comp-score {
+  font-size: 4rem;
+}
+.msg-container {
+  margin-top: 5rem;
+}
+
+#msg {
+  background-color: #081b31;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  display: inline;
+  padding: 1rem;
+  border-radius: 1rem;
+} */
+/* NEW CODE */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  background-color: #081b31;
+  color: white;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+}
+
+/* Choices Section */
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; /* Space between choices */
+  margin-top: 5rem;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, background-color 0.3s; /* Smooth hover effect */
+}
+
+.choice:hover,
+.choice:active {
+  /* Apply hover and active for touch devices */
+  cursor: pointer;
+  background-color: #081b31;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Smooth animation for images */
+}
+
+img:hover {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+/* Scoreboard Section */
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  gap: 5rem; /* Space between score sections */
+}
+
+#user-score,
+#comp-score {
+  font-size: 4rem;
+}
+
+/* Message Section */
+.msg-container {
+  margin-top: 5rem;
+}
+
+#msg {
+  background-color: #081b31;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+/* Responsive Design */
+
+/* For Tablets and Medium Screens */
+@media (max-width: 768px) {
+  .choices {
+    gap: 2rem; /* Reduce space between choices */
+  }
+
+  .choice {
+    height: 120px;
+    width: 120px;
+  }
+
+  img {
+    height: 110px;
+    width: 110px;
+  }
+
+  .score-board {
+    gap: 3rem; /* Adjust gap between score sections */
+  }
+
+  #user-score,
+  #comp-score {
+    font-size: 3rem;
+  }
+
+  #msg {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+}
+
+/* For Mobile Screens */
+@media (max-width: 480px) {
+  .choices {
+    flex-direction: row; /* Keep choices side by side */
+    gap: 1rem; /* Minimize gaps */
+  }
+
+  .choice {
+    height: 90px;
+    width: 90px;
+  }
+
+  img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .score-board {
+    flex-direction: column; /* Stack scores vertically for smaller screens */
+    gap: 1rem;
+  }
+
+  #user-score,
+  #comp-score {
+    font-size: 2rem;
+  }
+
+  #msg {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  /* Ensure hover and active states still work */
+  .choice:hover,
+  .choice:active {
+    cursor: pointer;
+    background-color: #081b31;
+    transform: scale(1.1); /* Slightly enlarge on touch as well */
+  }
+}
